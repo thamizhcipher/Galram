@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Galar</title>
+</head>
+<body>
+	
+<p>Lorem ipsum dolor sit amet consectetur adipisicing, elit. Minima explicabo, laborum sunt placeat tenetur delectus dignissimos velit deserunt laudantium accusamus dolore, magni quam hic facere in, dolor labore sint dolorem?</p>
+
+<div id="page">
+	<p>Starting point:</p>
+	<input type="text" placeholder="Latitude1" id="lat1" onchange="haversine()">
+	<input type="text" placeholder="Longitude1" id="lon1" onchange="haversine()">
+	<p>Ending point:</p>
+	<input type="text" placeholder="Latitude2" id="lat2">
+	<input type="text" placeholder="Longitude2" id="lon2">
+	<button type="submit" value="submit" onclick="haversine()">Start Journey</button>
+	<br> <br>
+	<input type="button" onclick="getLocation();" value="Get current location">
+	<p id="distance"></p>
+</div>
+
+
+
+
+<script src="./galar.js"></script>
+</body>
+</html>
+
+<!-- 13.008826088572578, 80.00323346256067 -->
+
+<!-- chromepet
+
+
+12.951637304642592, 80.14568209038185
+ -->
