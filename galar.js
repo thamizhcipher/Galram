@@ -66,9 +66,28 @@ if(navigator.geolocation) {
                alert("Sorry, browser does not support geolocation!");
             }
 }
+const requestWakeLock = async () => {
+   try {
+     const wakeLock = await navigator.wakeLock.request('screen');
+     console.log('Wake lock activated!');
+     // Do any necessary processing while the wake lock is active
+   } catch (error) {
+     console.error('Failed to activate wake lock:', error);
+   }
+ };
+ 
+ // Check browser support and request the wake lock
+ if ('wakeLock' in navigator) {
+   requestWakeLock();
+ } else {
+   console.warn('Wake Lock API is not supported in this browser.');
+ }
+
+document.addEventListener('DOMContentLoaded',requestWakeLock)
 
 
-
+// Request a wake lock
+ 
 
 
 //11.76939 79.55734 13.00861 80.00363
