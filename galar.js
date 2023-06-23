@@ -77,13 +77,14 @@ const requestWakeLock = async () => {
  };
  
  // Check browser support and request the wake lock
- if ('wakeLock' in navigator) {
-   requestWakeLock();
- } else {
-   console.warn('Wake Lock API is not supported in this browser.');
- }
-
-document.addEventListener('DOMContentLoaded',requestWakeLock)
+const check=()=>{
+	if ('wakeLock' in navigator) {
+	   requestWakeLock();
+	 } else {
+	   console.warn('Wake Lock API is not supported in this browser.');
+	 }
+}
+document.addEventListener('DOMContentLoaded',check)
 
 
 // Request a wake lock
